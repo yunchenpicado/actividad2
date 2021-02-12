@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Using CSS Grid</title>
-	<style>
-		body{
-			color: #fff;
-			font-family: 'Nunito Semibold';
-			text-align: center;
-		}
-		#content{
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			grid-auto-rows: minmax(100px, auto);
-			grid-gap: 10px;
-			max-width: 100%;
-			margin: 0 auto;
-            grid-template-areas:
-                "header header header header"
-                "aside . main main"
-                "nav . main main"
-                "section section section section"
-                "section section section section"
-                "footer footer footer footer";
-		}
-        body{
+    <title>Using CSS Grid</title>
+    <style>
+        body {
+            color: #fff;
+            font-family: 'Nunito Semibold';
+            text-align: center;
+        }
+        
+        #content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            grid-gap: 10px;
+            max-width: 100%;
+            margin: 0 auto;
+            grid-template-areas: "header header header header" "aside . main main" "nav . main main" "section section section section" "section section section section" "footer footer footer footer";
+        }
+        
+        body {
             background-color: rgb(56, 56, 56);
         }
-		#content > *{
-            
-			padding: 30px;
-		}
-        header{
+        
+        #content>* {
+            padding: 30px;
+        }
+        
+        header {
             grid-area: header;
             background-color: black;
         }
-        main{
+        
+        main {
             grid-area: main;
             background-color: black;
         }
-        aside{
+        
+        aside {
             grid-area: aside;
-            background-color: black;
+            background-color: rgb(179, 12, 12);
         }
-        nav{
+        
+        nav {
             grid-area: nav;
-            background-color: black;
+            background-color: rgb(49, 77, 60);
         }
-        section{
+        
+        section {
             grid-area: section;
-            background-color: black;
+            background-color: rgb(216, 169, 13);
         }
-        footer{
+        
+        footer {
             grid-area: footer;
-            background-color: black;
+            background-color: pink;
+            border: 5px solid red;
         }
-	</style>
+    </style>
 </head>
+
 <body>
 
-	<div id="content">
+    <div id="content">
 
-		<header>Header</header>
+        <header>Header</header>
         <main>Main</main>
         <section>Section</section>
         <aside>Aside</aside>
         <nav>Nav</nav>
         <footer>Footer</footer>
 
-	</div>
+    </div>
 
 </body>
+
 </html>
